@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <span class="logo">MY PERSONAL WEBSITE </span>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn" aria-label="Change theme">🎨 Theme</button>
+  </div>
+</header>
+
+
+<section id="home" class="section hero">
+  <div class="hero-text">
+    <p class="eyebrow-free">Hi, I'm</p>
+    <h1>RAYMUNDO SHIELA S.</h1>
+    <p class="hero-tagline">Student &middot; Aspiring Developer &middot; Curious human</p>
+    <p class="hero-sub">Welcome to my little corner of the internet — a place to share who I am, what I'm learning, and what I love outside of school.</p>
+    <button id="hello-btn" class="btn-primary">Say Hello</button>
+    <p id="welcome-message" class="welcome-message" aria-live="polite"></p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 300 300" class="squiggle">
+      <path d="M20,150 Q75,40 150,150 T280,150" fill="none" stroke="var(--coral)" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="60" cy="230" r="18" fill="var(--gold)"/>
+      <circle cx="240" cy="80" r="14" fill="var(--teal)"/>
+    </svg>
+  </div>
+</section>
+
+
+<section id="about" class="section about">
+  <div class="about-photo">
+    <img src="images/profile.jpg" alt="Portrait photo placeholder">
+  </div>
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>My name is <strong>RAYMUNDO SHIELA S.</strong>. I'm a student who enjoys exploring technology, building small projects, and figuring out how things work under the hood.</p>
+    <button id="toggle-about" class="btn-secondary">Read More</button>
+    <div id="about-extra" class="about-extra hidden">
+      <p>Outside of schoolwork, I like picking up new hobbies, spending time with friends and family, and slowly getting better at the things I care about. I'm still figuring a lot out — this website is part of that process.</p>
+      <p>Some things I'm currently learning: JavaScript, how to design cleaner interfaces, and how to explain my ideas more clearly.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="skills" class="section skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><span class="skill-icon">🧱</span><span>HTML</span></div>
+    <div class="skill-card"><span class="skill-icon">🎨</span><span>CSS</span></div>
+    <div class="skill-card"><span class="skill-icon">⚡</span><span>JavaScript</span></div>
+  </div>
+</section>
+
+
+<section id="hobbies" class="section hobbies">
+  <h2>Hobbies &amp; Interests</h2>
+  <ul class="hobbies-list">
+    <li><span class="hobby-icon">🎧</span>Listening to Music</li>
+    <li><span class="hobby-icon">📷</span>Photography</li>
+    <li><span class="hobby-icon">🧁</span>Baking</li>
+    <li><span class="hobby-icon">📚</span>Reading</li>
+    <li><span class="hobby-icon">🏞️</span>Hiking</li>
+    <li><span class="hobby-icon">⚾</span>Playing Softball</li>
+  </ul>
+</section>
+
+
+<section id="gallery" class="section gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <figure><img src="images/photo1.jpg" alt="Family birthday celebration"><figcaption>Family birthday celebration</figcaption></figure>
+    <figure><img src="images/photo2.jpg" alt="Celebrating with family"><figcaption>Celebrating together</figcaption></figure>
+    <figure><img src="images/photo3.jpg" alt="A night out"><figcaption>A night out</figcaption></figure>
+  </div>
+</section>
+
+
+<section id="contact" class="section contact">
+  <h2>Contact Me</h2>
+  <form id="contact-form" class="contact-form" novalidate>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Say something..." required></textarea>
+
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+  <p id="form-response" class="form-response" aria-live="polite"></p>
+
+  <div class="datetime-box">
+    <span>Current Date &amp; Time:</span>
+    <strong id="datetime-display">--</strong>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Made with HTML, CSS &amp; JavaScript &middot; <span id="footer-year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
